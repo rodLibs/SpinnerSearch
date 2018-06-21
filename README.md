@@ -1,3 +1,6 @@
+<img src="spinner.png" height="500" width="380">
+
+
 # SpinnerSearch
 library doing research in spinner.
 </br>
