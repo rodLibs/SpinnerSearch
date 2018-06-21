@@ -115,22 +115,73 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
 
 # Api Methods
 <pre><code>
-  targetBitmap(myBitmap)  -->> Receives a Bitmap.
+  setTitleMessage(String title)  -->> set title dialog.
 </code></pre>
 
 <pre><code>
-  photoBackgroundColor(myColor)  -->> You receive an int. This method will set the background color of the image.
+  setTitleButtonMessage(String title)  -->> set the dialog close button name.
 </code></pre>
 
 <pre><code>
-  changeBackgroundColor(true)  -->> You receive a boolean. This method will allow if user can change the background color.
+  setCancelable(boolean flag)  -->> closes the dialog when playing outside the component.
 </code></pre>
 
 <pre><code>
-  start();  -->> Receive an Activity. This method will send the data to the edit image screen.
+  setGravitCampSearch(int gravity)  -->> search field position.
+</code></pre>
+
+<pre><code>
+  setVisibleCampSearch(int visible)  -->> set search field visibility.
+</code></pre>
+
+<pre><code>
+  setTextSizeSearch(float size)  -->> set search field text size.
+</code></pre>
+
+<pre><code>
+  setTextHintSearch(String hint)  -->> search field hint text.
+</code></pre>
+
+<pre><code>
+  setColortextSearch(int color)  -->> search field color text.
+</code></pre>
+
+<pre><code>
+  setTypefaceSearch(Typeface type) -->> search field Typeface text.
+</code></pre>
+
+<pre><code>
+  setDividerHeigth(int heigth) -->> defined the thickness of the dividing line of the list.
+</code></pre>
+
+<pre><code>
+  setSizeFontGroupList(float size) -->> set the font size of groups.
+</code></pre>
+
+<pre><code>
+  setSizeFontItemList(float size) -->> set the font size of itens.
+</code></pre>
+
+<pre><code>
+  setColorFontGroupList(int color) -->> set the color text of groups.
+</code></pre>
+
+<pre><code>
+  setColorFontItemList(int color) -->> set the color text of itens.
+</code></pre>
+
+<pre><code>
+  setTypefaceGroupList(Typeface type) -->> set the Typeface text of groups.
+</code></pre>
+
+<pre><code>
+  setTypefaceItemList(Typeface type) -->> set the Typeface text of itens.
+</code></pre>
+
+<pre><code>
+  show() -->> Displayed the component.
 </code></pre>
 </br>
-
 
 
 
