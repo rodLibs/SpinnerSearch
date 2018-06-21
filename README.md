@@ -6,7 +6,7 @@ library doing research in spinner.
 
 
 # Requirements
-SpinnerSearch requires at minimum Android 4.0.3 (API level 15).
+SpinnerSearch requires at minimum Android 4.1 (API level 16).
 </br>
 </br>
 
@@ -65,6 +65,7 @@ repositories {
         listItem.add(new Item("Group 3","item 2"));
         listItem.add(new Item("Group 3","item 3"));
 
+
         SpinnerSearch spinner = new SpinnerSearch(MainActivity.this,listItem);
 </code></pre>
 
@@ -86,27 +87,39 @@ repositories {
 
 
 
+
 #### .kt
 
-###### Add bitmap, background color, release background color change and open activity for image editing.
+###### Create a list with the List object in the Group and Item pattern. Then add the list of items and context within SpinnerSearch.
 <pre><code>
-   ImageEdCrop.targetBitmap(myBitmap)
-                .photoBackgroundColor(Color.parseColor("#000000"))
-                .changeBackgroundColor(true)
-                .start(this@MainActivity);
+        var listItem = mutableListOf<Item>()
+        listItem.add(Item("Group 1", "item 1"))
+        listItem.add(Item("Group 1", "item 2"))
+        listItem.add(Item("Group 1", "item 3"))
+        listItem.add(Item("Group 2", "Item test 1"))
+        listItem.add(Item("Group 2", "Item test 2"))
+        listItem.add(Item("Group 2", "Item test 3"))
+        listItem.add(Item("Group 3", "item 1"))
+        listItem.add(Item("Group 3", "item 2"))
+        listItem.add(Item("Group 3", "item 3"))
+        
+        
+        var spinner: SpinnerSearch? = SpinnerSearch(this@MainActivity, listItem)
+  
 </code></pre>
 
 
-###### Receives the return of the edited image.
+###### Listener that returns the selected item.
 <pre><code>
-override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == Constants.REQUEST_IMAGE && resultCode == RESULT_OK){
-            var byteArray: ByteArray?  = data?.getByteArrayExtra(Constants.RETURN_IMAGE_BITMAP)
-            if (byteArray != null) {
-                var bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray?.size)
-            }
-        }
+         spinner?.setOnItemClickListener(OnItemClickListener {
+            i, item -> 
+            })
+</code></pre>
+
+
+###### Displayed the component.
+<pre><code>
+        spinner?.show()
 </code></pre>
 </br>
 
