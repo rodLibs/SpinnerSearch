@@ -1,4 +1,4 @@
-<img src="spinner.png" height="400" width="380">
+<img src="spinner.png" height="500" width="300">
 
 
 # SpinnerSearch
