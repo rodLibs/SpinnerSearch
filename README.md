@@ -21,8 +21,8 @@ The Gradle dependency is available via Maven. Maven is the default Maven reposit
 <pre><code>
 repositories {
     maven {
-            url  "https://dl.bintray.com/rod120/SpinnerSearch"
-        }
+          url  "https://dl.bintray.com/rod120/SpinnerSearch"
+          }
 }
 </code></pre>
 
@@ -52,26 +52,38 @@ repositories {
 # Sample usage
 #### .java
 
-###### Add bitmap, background color, release background color change and open activity for image editing.
+###### Create a list with the List object in the Group and Item pattern. Then add the list of items and context within SpinnerSearch.
 <pre><code>
-  ImageEdCrop.targetBitmap(myBitmap)
-                .photoBackgroundColor(Color.parseColor("#000000"))
-                .changeBackgroundColor(true)
-                .start(MyActivity.this);
+        List<Item> listItem = new ArrayList<>();
+        listItem.add(new Item("Group 1","item 1"));
+        listItem.add(new Item("Group 1","item 2"));
+        listItem.add(new Item("Group 1","item 3"));
+        listItem.add(new Item("Group 2","Item test 1"));
+        listItem.add(new Item("Group 2","Item test 2"));
+        listItem.add(new Item("Group 2","Item test 3"));
+        listItem.add(new Item("Group 3","item 1"));
+        listItem.add(new Item("Group 3","item 2"));
+        listItem.add(new Item("Group 3","item 3"));
+
+        SpinnerSearch spinner = new SpinnerSearch(MainActivity.this,listItem);
 </code></pre>
 
 
-###### Receives the return of the edited image.
+###### Listener that returns the selected item.
 <pre><code>
-@Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == Constants.REQUEST_IMAGE && resultCode == RESULT_OK){
-              byte[] byteArray = data.getByteArrayExtra(Constants.RETURN_IMAGE_BITMAP);
-              Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
-        }
-   }
+    spinner.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(int i, Item item) {
+            }
+        });
 </code></pre>
+
+
+###### Displayed the component.
+<pre><code>
+    spinner.show();
+</code></pre>
+
 
 
 #### .kt
@@ -96,13 +108,6 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
             }
         }
 </code></pre>
-
-
-#### Activity - Manifest
-```xml
-  <activity android:name="com.github.rodlibs.imagedcrop.ImageEdCropActivity"
-            android:screenOrientation="portrait"/>
-```
 </br>
 
 
