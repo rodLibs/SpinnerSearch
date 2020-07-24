@@ -1,3 +1,6 @@
+<img src="spinner.png" height="500" width="300">
+
+
 # SpinnerSearch
 library doing research in spinner.
 </br>
@@ -32,7 +35,7 @@ repositories {
 
 #### Gradle:
 <pre><code>
-    compile 'com.github.rodlibs:spinnerSearch:1.0'
+    implementation 'com.github.rodlibs:spinnerSearch:2.0'
 </code></pre>
 
 
@@ -41,7 +44,7 @@ repositories {
  <dependency>
   <groupId>com.github.rodlibs</groupId>
   <artifactId>spinnerSearch</artifactId>
-  <version>1.0</version>
+  <version>2.0</version>
   <type>pom</type>
 </dependency>
 ```
