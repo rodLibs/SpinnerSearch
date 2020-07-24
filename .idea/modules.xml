@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MyLibSpinnerSearch.iml" filepath="$PROJECT_DIR$/MyLibSpinnerSearch.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SpinnerSearch.iml" filepath="$PROJECT_DIR$/SpinnerSearch.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpinnerSearch.iml" filepath="$PROJECT_DIR$/SpinnerSearch.iml" group="SpinnerSearch" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="SpinnerSearch/app" />
     </modules>
   </component>
 </project>
